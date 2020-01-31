@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BaseLayout from '../components/layout/BaseLayout';
 import { withRouter } from 'next/router';
 import axios from 'axios';
+import BasePage from '../components/BasePage';
 
 export class Profile extends Component {
 	static async getInitialProps({ query }) {
@@ -21,17 +22,19 @@ export class Profile extends Component {
 	render() {
 		const { prof } = this.props;
 		return (
-			<BaseLayout>
-				<h1>data in here</h1>
-				<h3>
-					<strong>Title</strong>: {prof.title}
-				</h3>
-				<p>
-					<strong>BODY</strong>: {prof.body}
-				</p>
-				<p>
-					<strong>Id</strong> : {prof.id}
-				</p>
+			<BaseLayout {...this.props.auth}>
+				<BasePage>
+					<h1>data in here</h1>
+					<h3>
+						<strong>Title</strong>: {prof.title}
+					</h3>
+					<p>
+						<strong>BODY</strong>: {prof.body}
+					</p>
+					<p>
+						<strong>Id</strong> : {prof.id}
+					</p>
+				</BasePage>
 			</BaseLayout>
 		);
 	}

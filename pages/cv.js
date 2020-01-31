@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import BaseLayout from '../components/layout/BaseLayout';
+import BasePage from '../components/BasePage';
 
 export class Cv extends Component {
 	render() {
 		return (
-			<BaseLayout>
-				<h1>I am CV Page With Class Component</h1>
+			<BaseLayout {...this.props.auth}>
+				<BasePage className="cv-page">
+					<h1>I am CV Page With Class Component</h1>
+				</BasePage>
 			</BaseLayout>
 		);
 	}
