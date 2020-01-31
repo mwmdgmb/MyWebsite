@@ -3,7 +3,7 @@
 
 
 
-#npm inistall
+#npm install
 
 
 
