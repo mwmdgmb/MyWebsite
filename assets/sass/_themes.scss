@@ -1,0 +1,38 @@
+.toggleTheme {
+	position: absolute;
+	width: 150px;
+	height: 100px;
+	background-color: #ccc;
+	top: 64px;
+	left: 10px;
+	color: #fff;
+
+	.badge:empty {
+		display: inline-block !important;
+	}
+}
+
+.dark-theme {
+	background: #303030;
+	color: #ffff;
+	nav {
+		background: #505050;
+	}
+	.posotion-custom {
+		background: #303030;
+	}
+	.active {
+		color: orangered;
+	}
+	.port-navbar-link {
+		color: #fff !important;
+		&.active {
+			color: orangered;
+		}
+
+		&:hover,
+		&:focus {
+			color: orangered;
+		}
+	}
+}

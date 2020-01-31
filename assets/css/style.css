@@ -1,0 +1,250 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("/assets/fonts/Montserrat-Light.ttf");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("/assets/fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("/assets/fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("/assets/fonts/Montserrat-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+.cover {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper {
+  min-height: 100%;
+  min-width: 100%;
+  margin-top: 0;
+  position: relative;
+}
+
+.main-section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.main-section .background-image {
+  width: 100%;
+  height: 100%;
+}
+
+.main-section .background-image-img {
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.posotion-custom {
+  position: absolute;
+  top: 50%;
+  height: auto;
+  width: 30%;
+  left: 50%;
+  text-align: left;
+  background-color: #fff;
+  padding: 25px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 576px) {
+  .background-image-img {
+    max-height: 300px !important;
+  }
+  .posotion-custom {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .background-image-img {
+    max-height: 500px;
+  }
+  .posotion-custom {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    width: 341px;
+  }
+  .hero-section-content {
+    width: 341px;
+  }
+}
+
+.port-navbar.port-default {
+  z-index: 15;
+  padding: 10px;
+}
+
+.port-navbar.port-default .port-navbar-brand {
+  color: #000;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.port-navbar.port-default .port-navbar-item {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.port-navbar.port-default .port-navbar-link {
+  color: #000;
+  font-weight: lighter;
+  letter-spacing: 0.8px;
+  font-size: 18px;
+}
+
+.port-navbar.port-default .port-navbar-link.active {
+  color: orangered !important;
+}
+
+.port-navbar.port-default .port-navbar-link:hover, .port-navbar.port-default .port-navbar-link:focus {
+  color: orangered !important;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', 'Helvetica';
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.self-typed {
+  font-size: 31px;
+  font-weight: bold;
+  color: #000;
+}
+
+.base-page {
+  padding-top: 150px;
+}
+
+.active {
+  color: orangered !important;
+}
+
+button {
+  outline: none !important;
+  border: none !important;
+  height: 36px;
+  width: 85px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  background: linear-gradient(120deg, red, #ffc900, #eeff00) !important;
+  background-size: 600% !important;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  color: #fff !important;
+}
+
+button:hover {
+  color: #000 !important;
+  background-position: right !important;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  height: 36px;
+  width: 85px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  background: linear-gradient(120deg, red, #ffc900, #eeff00);
+  background-size: 600%;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  color: #000;
+  background-position: right;
+}
+
+.toggleTheme {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background-color: #ccc;
+  top: 64px;
+  left: 10px;
+  color: #fff;
+}
+
+.toggleTheme .badge:empty {
+  display: inline-block !important;
+}
+
+.dark-theme {
+  background: #303030;
+  color: #ffff;
+}
+
+.dark-theme nav {
+  background: #505050;
+}
+
+.dark-theme .posotion-custom {
+  background: #303030;
+}
+
+.dark-theme .active {
+  color: orangered;
+}
+
+.dark-theme .port-navbar-link {
+  color: #fff !important;
+}
+
+.dark-theme .port-navbar-link.active {
+  color: orangered;
+}
+
+.dark-theme .port-navbar-link:hover, .dark-theme .port-navbar-link:focus {
+  color: orangered;
+}
+/*# sourceMappingURL=style.css.map */

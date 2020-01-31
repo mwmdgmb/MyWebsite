@@ -1,0 +1,35 @@
+// HEADER
+.port-navbar.port-default {
+	z-index: 15;
+	padding: 10px;
+
+	.port-navbar {
+		&-brand {
+			color: #000;
+			font-size: 18px;
+			letter-spacing: 1px;
+			font-weight: lighter;
+		}
+
+		&-item {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		&-link {
+			color: #000;
+			font-weight: lighter;
+			letter-spacing: 0.8px;
+			font-size: 18px;
+
+			&.active {
+				color: orangered !important;
+			}
+
+			&:hover,
+			&:focus {
+				color: orangered !important;
+			}
+		}
+	}
+}
