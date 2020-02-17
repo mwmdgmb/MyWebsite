@@ -16,14 +16,14 @@ const BsNavLink = (props) => {
 
 const Login = () => {
 	return (
-		<button onClick={auth0.login} className="nav-link btn text-center  clickable">
+		<span onClick={auth0.login} className="nav-link btn text-center d-sm-block clickable">
 			Login
-		</button>
+		</span>
 	);
 };
 const Logout = () => {
 	return (
-		<span onClick={auth0.logout} className="nav-link btn btn-danger text-center clickable">
+		<span onClick={auth0.logout} className="nav-link btn btn-danger text-center d-sm-block clickable">
 			Logout
 		</span>
 	);
@@ -39,6 +39,17 @@ export default class Header extends Component {
 		this.toggle = this.toggle.bind(this);
 		this.toggleTheme = this.toggleTheme.bind(this);
 	}
+	// componentDidMount() {
+	// 	const listener = (e) => {
+	// 		if (e.key === 'Escape') {
+	// 			alert('sas');
+	// 		}
+	// 		windows.addEventListener('Keydown', listener);
+	// 	};
+	// 	return () => {
+	// 		windows.removeEventListener('Keydown', listener);
+	// 	};
+	// }
 
 	toggle = () => {
 		this.setState({
@@ -76,11 +87,11 @@ export default class Header extends Component {
 		}
 	};
 	render() {
-		const { isAuthenticated, user } = this.props;
+		const { isAuthenticated, user, className } = this.props;
 
 		return (
 			<div>
-				<Navbar light expand="md" className="port-navbar port-default shadow-lg">
+				<Navbar light expand="md" className={`port-navbar port-nav-base ${className} shadow-lg`}>
 					<div className="container-fluid px-5">
 						<NavbarBrand classname="port-navbar-brand">
 							<div className="d-flex flex-row">
@@ -120,14 +131,16 @@ export default class Header extends Component {
 														/>
 													</div>
 												</div> :
-													null
-											}
+												null}
 										</span>
 									</div> :
-									null
-									}
+									null}
 								<Link href="/secret">
-									{isAuthenticated ? <a className="active nav-link">{user.name}</a> : <a className="active nav-link">Mwmd Gmb</a>}
+									{
+										isAuthenticated ? <a className="active nav-link">
+											<small>{user.name}</small>
+										</a> :
+										<a className="active nav-link">Mwmd Gmb</a>}
 								</Link>
 							</div>
 						</NavbarBrand>
@@ -141,7 +154,7 @@ export default class Header extends Component {
 									<BsNavLink route="/about" title="About" />
 								</NavItem>
 								<NavItem clasName="port-navbar-item">
-									<BsNavLink route="/profiles" title="Profile" />
+									<BsNavLink route="/portfolios" title="Portfolios" />
 								</NavItem>
 								<NavItem clasName="port-navbar-item">
 									<BsNavLink route="/cv" title="CV" />
