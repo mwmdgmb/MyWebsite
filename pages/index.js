@@ -13,7 +13,7 @@ export class Home extends Component {
 	render() {
 		// const { isAuthenticated, user } = this.props.auth;
 		return (
-			<BaseLayout className="cover" {...this.props.auth}>
+			<BaseLayout className="cover" {...this.props.auth} headerType="index">
 				<div className="main-section">
 					<div className="background-image">
 						<img className="background-image-img" src={bg} />
