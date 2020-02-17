@@ -1,5 +1,6 @@
+@import './color';
 // HEADER
-.port-navbar.port-default {
+.port-navbar.port-nav-base {
 	z-index: 15;
 	padding: 10px;
 
@@ -32,4 +33,8 @@
 			}
 		}
 	}
+}
+.port-navbar.port-nav-base.port-nav-default {
+	padding: 10px;
+	background: $header-dark !important;
 }

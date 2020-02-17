@@ -1,16 +1,10 @@
-button {
-	outline: none !important;
-	border: none !important;
-	//padding: 8px 26px !important;
+@import './mixins/_buttons.scss';
+
+.btn {
+	@include btn();
 	height: 36px;
 	width: 85px;
-	border-radius: 7px;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
-	-ms-border-radius: 7px;
-	-o-border-radius: 7px;
-	background: linear-gradient(120deg, red, #ffc900, #eeff00) !important;
-	background-size: 600% !important;
+	background: #ff4500 !important;
 	transition: 0.5s;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
@@ -18,27 +12,40 @@ button {
 	-o-transition: 0.5s;
 	color: #fff !important;
 	&:hover {
-		color: #000 !important;
-		background-position: right !important;
+		background: #ffc900 !important;
 	}
 }
 
-.btn {
-	outline: none;
-	border: none;
-	height: 36px;
-	width: 85px;
-	border-radius: 7px;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
-	-ms-border-radius: 7px;
-	-o-border-radius: 7px;
-	background: linear-gradient(120deg, red, #ffc900, #eeff00);
-	background-size: 600%;
-	color: #fff;
-	transition: 0.5s;
+.btn-block {
+	@include btn();
+	width: 100% !important;
+	transition: 0.9s;
+	-webkit-transition: 1.3s;
+	-moz-transition: 0.9s;
+	-ms-transition: 0.9s;
+	-o-transition: 0.9s;
+	background: #48ff00 !important;
 	&:hover {
-		color: #000;
-		background-position: right;
+		background: #246e07 !important;
 	}
+}
+
+.btn-create-portfolio {
+	padding: 5px 12px !important;
+	border: none !important;
+	outline: none !important;
+}
+.btn-delete-portfolio {
+	padding: 5px 0px !important;
+	border: none !important;
+	outline: none !important;
+}
+.btn-edit-portfolio {
+	padding: 5px !important;
+	background: transparent;
+	border: none !important;
+	outline: none !important;
+}
+.navbar-toggler {
+	background: #eee !important;
 }

@@ -1,12 +1,15 @@
 @import './fonts';
 @import './index';
 @import './header';
+@import './profile';
+// @import './color';
+@import './alert';
 
 html,
 body {
 	height: 100%;
 	width: 100%;
-	// background: url('../images/wallpapersden.com_firewatch-digital-art_1600x900.jpg') 100% 100%  !important;
+	// background: url('.a./images/wallpapersden.com_firewatch-digital-art_1600x900.jpg') 100% 100%  !important;
 	font-family: 'Montserrat', 'Helvetica';
 }
 
@@ -20,15 +23,34 @@ body {
 	color: #000;
 	// direction: rtl;
 }
-
-.base-page {
-	padding-top: 150px;
-}
-
 .active {
-	color: orangered !important;
+	color: #ff4500 !important;
 }
 
 @import './buttons';
 // @import './typed';
 @import './themes';
+
+.base-page {
+	padding-top: 70px;
+	min-height: 100vh;
+
+	.page-header {
+		&-title {
+			font-weight: 700;
+			display: inline-block;
+			margin-bottom: 20px;
+		}
+	}
+}
+.MuiIconButton-root {
+	padding: 3px !important;
+	color: none !important;
+	border-radius: 3px !important;
+	-webkit-border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+	-ms-border-radius: 3px !important;
+	-o-border-radius: 3px !important;
+}
+
+// @import './errors'

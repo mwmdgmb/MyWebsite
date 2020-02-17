@@ -1,0 +1,24 @@
+.react-confirm-alert-blur {
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+}
+
+.custom-ui {
+	.closeEvent {
+		color: #fff;
+		background: #19da19;
+		padding: 10px 16px;
+		margin-right: 6px;
+		border: none;
+		outline: none;
+		border-radius: 5px;
+	}
+	.DeleteEvent {
+		padding: 10px 16px;
+		outline: none;
+		border: none;
+		background: #fb1f1f;
+		color: #ffff;
+		border-radius: 5px;
+	}
+}
