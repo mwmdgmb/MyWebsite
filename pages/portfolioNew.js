@@ -7,6 +7,7 @@ import PortfolioCreateForm from '../components/Portfolio/PortfolioCreateForm';
 import Grid from '@material-ui/core/Grid';
 import { createPortfolio } from '../actions/index';
 import { Router } from '../routes';
+import moment from 'moment'
 
 const INITAIL_VALUES = {
 	title: '',
@@ -14,8 +15,8 @@ const INITAIL_VALUES = {
 	location: '',
 	position: '',
 	description: '',
-	startDate: '',
-	endDate: ''
+	startDate: moment(),
+	endDate: moment()
 };
 
 export class PortfolioNew extends Component {

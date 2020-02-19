@@ -1,8 +1,8 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import BaseLayout from '../components/layout/BaseLayout';
 // import axios from 'axios';
 // import { Link } from '../routes';
-import { Row, Card, CardHeader, CardBody, CardText, Col, CardTitle } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import BasePage from '../components/BasePage';
 import { getPortfolios, deletePortfolio } from '../actions';
 import { Router } from '../routes';
@@ -12,20 +12,11 @@ import AddIcon from '@material-ui/icons/Add';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import { confirmAlert } from 'react-confirm-alert'; // Import
-import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import PortfolioCard from '../components/portfolio/PortfolioCard';
 
 export class Portfolios extends Component {
 	static async getInitialProps() {
-		// let posts = [];
-		// try {
-		// 	const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-		// 	posts = response.data;
-		// } catch (error) {
-		// 	console.error(error);
-		// }
-
-		// return { posts: posts.splice(0, 10) };
-
 		let portfolios = [];
 
 		try {
@@ -36,27 +27,36 @@ export class Portfolios extends Component {
 
 		return { portfolios };
 	}
-	DisplayDeleteWarning = (portfolioId) => {	
+
+	navigateToEdit = (portfolioId, e) => {
+		e.stopPropagation();
+		Router.pushRoute(`/portfolios/${portfolioId}/edit`);
+	};
+
+	displayDeleteWarning = (portfolioId, e) => {
+		e.stopPropagation();
 		confirmAlert({
-			  customUI: ({ onClose }) => {
-			    return (
-			      <div className='custom-ui'>
-			        <h1>Are you sure?</h1>
-			        <p>You want to delete this file?</p>
-			        <button className="closeEvent" onClick={onClose}>No</button>
-			        <button
-			         className="DeleteEvent"
-			         onClick={() => {
-			            this.deletePortfolio(portfolioId);
-			            onClose();
-			          }}
-			        >
-			          Yes, Delete it!
-			        </button>
-			      </div>
-			    );
-			  }
-			});
+			customUI: ({ onClose }) => {
+				return (
+					<div className="custom-ui">
+						<h1>Are you sure?</h1>
+						<p>You want to delete this file?</p>
+						<button className="closeEvent" onClick={onClose}>
+							No
+						</button>
+						<button
+							className="DeleteEvent"
+							onClick={() => {
+								this.deletePortfolio(portfolioId);
+								onClose();
+							}}
+						>
+							Yes, Delete it!
+						</button>
+					</div>
+				);
+			}
+		});
 		// const isConfirm = confirm('Are you sure you want to delete this protfolio???');
 		// if (isConfirm) {
 		// 	this.deletePortfolio(portfolioId);
@@ -75,42 +75,30 @@ export class Portfolios extends Component {
 		return portfolios.map((portfolio, index) => (
 			<Col md="4" key={index}>
 				<React.Fragment>
-					<span>
-						<Card className="portfolio-card">
-							<CardHeader className="portfolio-card-header">{portfolio.position}</CardHeader>
-							<CardBody>
-								<p className="portfolio-card-city"> {portfolio.location} </p>
-								<CardTitle className="portfolio-card-title">{portfolio.company}</CardTitle>
-								<CardText className="portfolio-card-text">{portfolio.description}</CardText>
-								<div className="readMore"> </div>
-							</CardBody>
-							{isAuthenticated &&
-							isSiteOwner && (
-								<div className="my-3">
-									<span
-										className="btn-edit-portfolio m-2"
-										onClick={() => Router.pushRoute(`/portfolios/${portfolio._id}/edit`)}
-									>
-										<Tooltip title="Edit Item" placement="top">
-											<IconButton aria-label="edit">
-												<CreateIcon />
-											</IconButton>
-										</Tooltip>
-									</span>
-									<div
-										onClick={() => this.DisplayDeleteWarning(portfolio._id)}
-										className="btn-delete-portfolio d-inline m-2"
-									>
-										<Tooltip title="Delete Item" placement="top">
-											<IconButton aria-label="delete">
-												<DeleteIcon />
-											</IconButton>
-										</Tooltip>
-									</div>
+					<PortfolioCard portfolio={portfolio}>
+						{isAuthenticated &&
+						isSiteOwner && (
+							<div className="my-3">
+								<span className="btn-edit-portfolio m-2" onClick={(e) => this.navigateToEdit(portfolio._id, e)}>
+									<Tooltip title="Edit Item" placement="top">
+										<IconButton aria-label="edit">
+											<CreateIcon />
+										</IconButton>
+									</Tooltip>
+								</span>
+								<div
+									onClick={(e) => this.displayDeleteWarning(portfolio._id, e)}
+									className="btn-delete-portfolio d-inline m-2"
+								>
+									<Tooltip title="Delete Item" placement="top">
+										<IconButton aria-label="delete">
+											<DeleteIcon />
+										</IconButton>
+									</Tooltip>
 								</div>
-							)}
-						</Card>
-					</span>
+							</div>
+						)}
+					</PortfolioCard>
 				</React.Fragment>
 			</Col>
 		));

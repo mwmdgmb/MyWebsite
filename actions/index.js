@@ -55,7 +55,6 @@ export const updatePortfolio = async (portfolioData) => {
 };
 
 export const getPortfolioById = async (id) => {
-	console.log('Index Get Function');
 	return await axiosInstance.get(`/portfolios/${id}`, setAuthHeader()).then((response) => response.data);
 };
 

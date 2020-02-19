@@ -10,9 +10,15 @@
 	-moz-transition: 0.5s;
 	-ms-transition: 0.5s;
 	-o-transition: 0.5s;
+	border: none !important;
+	outline: none !important;
 	color: #fff !important;
 	&:hover {
 		background: #ffc900 !important;
+	}
+	&:focus {
+		border: none !important;
+		outline: none !important;
 	}
 }
 
@@ -28,24 +34,44 @@
 	&:hover {
 		background: #246e07 !important;
 	}
+	&:focus {
+		border: none !important;
+		outline: none !important;
+	}
 }
 
 .btn-create-portfolio {
 	padding: 5px 12px !important;
 	border: none !important;
 	outline: none !important;
+	&:focus {
+		border: none !important;
+		outline: none !important;
+	}
 }
 .btn-delete-portfolio {
 	padding: 5px 0px !important;
 	border: none !important;
 	outline: none !important;
+	&:focus {
+		border: none !important;
+		outline: none !important;
+	}
 }
 .btn-edit-portfolio {
 	padding: 5px !important;
 	background: transparent;
 	border: none !important;
 	outline: none !important;
+	&:focus {
+		border: none !important;
+		outline: none !important;
+	}
 }
 .navbar-toggler {
 	background: #eee !important;
+	&:focus {
+		border: none !important;
+		outline: none !important;
+	}
 }

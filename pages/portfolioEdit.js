@@ -15,7 +15,7 @@ export class PortfolioEdit extends Component {
 		let portfolio = {};
 		try {
 			portfolio = await getPortfolioById(query.id);
-			console.log('portfolioID Is Done !!!' , portfolio)
+
 		} catch (error) {
 			console.log("Error Get Portfolio By ID" , error)
 		}
@@ -48,7 +48,7 @@ export class PortfolioEdit extends Component {
 	render() {
 		const { error } = this.state;
 		const { portfolio } = this.props;
-		console.log('portfolio :', portfolio);
+
 
 		return (
 			<BaseLayout {...this.props.auth}>
