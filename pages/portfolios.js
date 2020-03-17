@@ -109,12 +109,12 @@ export class Portfolios extends Component {
 		const { isAuthenticated, isSiteOwner } = this.props.auth;
 
 		return (
-			<BaseLayout {...this.props.auth}>
+			<BaseLayout title="Mohammad Garmabi - Learn About My Experience" {...this.props.auth}>
 				<BasePage className="portfolio-page" title="Portfolios Page">
 					{isAuthenticated &&
 					isSiteOwner && (
 						<div className="d-flex flex-row py-3">
-							<div className="btn-create-portfolio my-2 rounded " onClick={() => Router.pushRoute('/portfolioNew')}>
+							<div className="btn-create-portfolio my-2 rounded " onClick={() => Router.pushRoute('/portfolios/new')}>
 								<Tooltip title="Add Item" placement="top">
 									<IconButton aria-label="add">
 										<AddIcon style={{ color: '#48ff00' }} /> Create Portfolio

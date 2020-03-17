@@ -3,17 +3,9 @@ import BaseLayout from '../components/layout/BaseLayout';
 import BasePage from '../components/BasePage';
 import withAuth from '../components/hoc/withAuth';
 import axios from 'axios';
-// import { getSecretData } from './../actions/index';
 
 export class Secret extends Component {
-	// static async getInitialProps({ req }) {
-	// 	const authSecretData =
-	// 		process.browser ? await getSecretData() :
-	// 		await getSecretDataServer(req);
 
-	// 	console.log(authSecretData);
-	// 	return { authSecretData };
-	// }
 
 	state = {
 		secretData: []
@@ -42,14 +34,10 @@ export class Secret extends Component {
 	};
 
 	render() {
-		// debugger;
-		// const { superSecretValue } = this.props;
-
 		return (
 			<BaseLayout {...this.props.auth}>
 				<BasePage>
 					<h1>I am Secret Page With Class Component</h1>
-					{/* <h3>{superSecretValue}</h3> */}
 					{this.displaySecretData()}
 				</BasePage>
 			</BaseLayout>

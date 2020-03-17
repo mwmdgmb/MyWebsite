@@ -1,186 +1,313 @@
-// MIXINS
 @mixin background-cover() {
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 // Blog LISTING!
 
 .port-nav-landing {
-	background: transparent !important;
+  background: transparent !important;
 }
 
 .blog-listing-page {
-	min-height: 100vh;
-	background-color: transparent !important;
+  min-height: 100vh;
+  background-color: transparent !important;
 
-	.blog-body {
-		padding: 50px 0 0 0;
-	}
+  .blog-body {
+    padding: 50px 0 0 0;
+  }
 
-	.post-preview {
-		> a {
-			color: #262626;
-			&:focus,
-			&:hover {
-				text-decoration: none;
-				color: #ff4500;
-			}
-			> .post-title {
-				font-size: 30px;
-				margin-top: 30px;
-				font-weight: 700;
-				margin-bottom: 10px;
-			}
-			> .post-subtitle {
-				font-weight: 300;
-				margin: 0 0 10px;
-				color: #565656;
-			}
-		}
+  .post-preview {
+    > a {
+      color: #262626;
+      &:focus,
+      &:hover {
+        text-decoration: none;
+        color: #ff4500;
+      }
+      > .post-title {
+        font-size: 30px;
+        margin-top: 30px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      > .post-subtitle {
+        font-weight: 300;
+        margin: 0 0 10px;
+        color: #565656;
+      }
+    }
 
-		> .post-meta {
-			font-size: 18px;
-			font-style: italic;
-			margin-top: 0;
-			color: #262626;
-			> a {
-				text-decoration: none;
-				color: #262626;
-				&:focus,
-				&:hover {
-					text-decoration: underline;
-					color: #ff4500;
-				}
-			}
-		}
+    > .post-meta {
+      font-size: 18px;
+      font-style: italic;
+      margin-top: 0;
+      color: #262626;
+      > a {
+        text-decoration: none;
+        color: #262626;
+        &:focus,
+        &:hover {
+          text-decoration: underline;
+          color: #ff4500;
+        }
+      }
+    }
 
-		@media only screen and (min-width: 768px) {
-			> a {
-				> .post-title {
-					font-size: 36px;
-				}
-			}
-		}
-	}
+    @media only screen and (min-width: 768px) {
+      > a {
+        > .post-title {
+          font-size: 36px;
+        }
+      }
+    }
+  }
 
-	.masthead {
-		// TIP: Background images are set within the HTML using inline CSS!
-		background: url('../images/blogs.jpg') !important;
-		background: no-repeat center center;
-		background-color: #eee;
-		background-attachment: scroll;
-		height: 600px;
-		position: relative;
-		background-position: center;
-		@include background-cover;
-		.overlay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			background-color: #505050;
-			opacity: 0.5;
-		}
-		.page-heading,
-		.post-heading,
-		.site-heading {
-			padding: 200px 0 150px;
-			color: #fff;
-			@media only screen and (min-width: 768px) {
-				padding: 200px 0;
-			}
-		}
-		.page-heading,
-		.site-heading {
-			text-align: center;
-			h1 {
-				font-size: 50px;
-				margin-top: 0;
-				font-weight: 700;
-			}
-			.subheading {
-				font-size: 24px;
-				font-weight: 300;
-				line-height: 1.1;
-				display: block;
-				margin: 10px 0 0;
-			}
-			@media only screen and (min-width: 768px) {
-				h1 {
-					font-size: 80px;
-				}
-			}
-		}
-		.post-heading {
-			h1 {
-				font-size: 35px;
-			}
-			.meta,
-			.subheading {
-				line-height: 1.1;
-				display: block;
-			}
-			.subheading {
-				font-size: 24px;
-				font-weight: 600;
-				margin: 10px 0 30px;
-			}
-			.meta {
-				font-size: 20px;
-				font-weight: 300;
-				font-style: italic;
+  .text-custom {
+    @include btn();
+    background: #ff4500 !important;
+    border: none !important;
+    outline: none !important;
+    color: #fff !important;
+    padding: 10px 17px !important;
+    text-decoration: none !important;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    &:hover {
+      transform: translateX(5px);
+      -webkit-transform: translateX(5px);
+      -moz-transform: translateX(5px);
+      -ms-transform: translateX(5px);
+      -o-transform: translateX(5px);
+    }
+  }
 
-				a {
-					color: #262626;
-				}
-			}
-			@media only screen and (min-width: 768px) {
-				h1 {
-					font-size: 55px;
-				}
-				.subheading {
-					font-size: 30px;
-				}
-			}
-		}
-	}
-	.text-custom {
-		@include btn();
-		background: #ff4500 !important;
-		border: none !important;
-		outline: none !important;
-		color: #fff !important;
-		padding: 10px 17px !important;
-		text-decoration: none !important;
-		transition: 0.3s;
-		-webkit-transition: 0.3s;
-		-moz-transition: 0.3s;
-		-ms-transition: 0.3s;
-		-o-transition: 0.3s;
-		&:hover {
-			transform: translateX(5px);
-			-webkit-transform: translateX(5px);
-			-moz-transform: translateX(5px);
-			-ms-transform: translateX(5px);
-			-o-transform: translateX(5px);
+  // Styling for the footer
+  footer {
+    padding: 50px 0 65px;
+    .list-inline {
+      margin: 0;
+      padding: 0;
+    }
+    .copyright {
+      font-size: 14px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
 }
-	}
 
-	// Styling for the footer
-	footer {
-		padding: 50px 0 65px;
-		.list-inline {
-			margin: 0;
-			padding: 0;
-		}
-		.copyright {
-			font-size: 14px;
-			margin-bottom: 0;
-			text-align: center;
-		}
-	}
+.masthead {
+  // TIP: Background images are set within the HTML using inline CSS!
+  background: url("../images/hacker-2300772.jpg") !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  // background: no-repeat center center;
+  background-color: #eee;
+  background-attachment: fixed !important;
+  height: 600px;
+  position: relative;
+  // background-position: center;
+  // background-size: cover;
+  @include background-cover;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #50505085;
+    opacity: 0.5;
+  }
+  .page-heading,
+  .post-heading,
+  .site-heading {
+    padding: 200px 0 150px;
+    color: #fff;
+    @media only screen and (min-width: 768px) {
+      padding: 200px 0;
+    }
+  }
+  .page-heading,
+  .site-heading {
+    text-align: center;
+    h1 {
+      font-size: 50px;
+      margin-top: 0;
+      font-weight: 700;
+    }
+    .subheading {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.1;
+      display: block;
+      margin: 10px 0 0;
+    }
+    @media only screen and (min-width: 768px) {
+      h1 {
+        font-size: 80px;
+      }
+    }
+  }
+  .post-heading {
+    h1 {
+      font-size: 35px;
+    }
+    .meta,
+    .subheading {
+      line-height: 1.1;
+      display: block;
+    }
+    .subheading {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 10px 0 30px;
+    }
+    .meta {
+      font-size: 20px;
+      font-weight: 300;
+      font-style: italic;
+
+      a {
+        color: #262626;
+      }
+    }
+    @media only screen and (min-width: 768px) {
+      h1 {
+        font-size: 55px;
+      }
+      .subheading {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.base-page {
+  &.blog-user-page {
+    padding-top: 50px;
+  }
+  .user-blogs-list {
+    list-style: none;
+    padding: 20px;
+    > li {
+      font-size: 24px;
+      text-align: left;
+      padding-left: 19px;
+      > a {
+        text-decoration: none;
+      }
+    }
+  }
+  .blog-status-title {
+    font-weight: bold !important;
+    letter-spacing: 1.3px;
+  }
+  .port-dropdown {
+    float: right;
+    .style-dark {
+      background: #565656 !important;
+      padding: 7px 12px !important;
+    }
+  }
+}
+
+.masthead-two {
+  // TIP: Background images are set within the HTML using inline CSS!
+  background: url("../images/forest-2560x1440-mountains-violet-birds-art-hd-16431.jpg") !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  // background: no-repeat center center;
+  background-color: #eee;
+  background-attachment: fixed !important;
+  height: 700px;
+  position: relative;
+
+  // background-position: center;
+  // background-size: cover;
+  @include background-cover;
+  .page-heading,
+  .post-heading,
+  .site-heading {
+    padding: 200px 0 150px;
+    color: #fff;
+    @media only screen and (min-width: 768px) {
+      padding: 200px 0;
+    }
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.5;
+  }
+  .page-heading,
+  .site-heading {
+    text-align: center;
+    h1 {
+      font-size: 50px;
+      margin-top: 0;
+      font-weight: 700;
+    }
+    .subheading {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.1;
+      display: block;
+      margin: 10px 0 0;
+    }
+    @media only screen and (min-width: 768px) {
+      h1 {
+        font-size: 80px;
+      }
+    }
+  }
+  .post-heading {
+    h1 {
+      font-size: 35px;
+    }
+    .meta,
+    .subheading {
+      line-height: 1.1;
+      display: block;
+    }
+    .subheading {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 10px 0 30px;
+    }
+    .meta {
+      font-size: 20px;
+      font-weight: 300;
+      font-style: italic;
+
+      a {
+        color: #262626;
+      }
+    }
+    @media only screen and (min-width: 768px) {
+      h1 {
+        font-size: 55px;
+      }
+      .subheading {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.blog-details-page {
+  @media screen and (min-width: 992px) {
+    p {
+      font-size: 20px;
+    }
+  }
 }

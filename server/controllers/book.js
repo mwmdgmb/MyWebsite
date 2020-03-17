@@ -12,7 +12,6 @@ exports.getBook = (req, res) => {
 exports.saveBook = (req, res) => {
 	const bookData = req.body;
 
-	console.log(bookData);
 
 	const book = new Book(bookData);
 

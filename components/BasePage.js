@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const BasePage = (props) => {
 	const { className, children, title } = props;
 
-	// const className = porps.className || ''
 	return (
 		<div className={`base-page ${className}`}>
 			<Container>
@@ -19,12 +18,12 @@ const BasePage = (props) => {
 	);
 };
 
-// BasePage.defaultProps = {
-// 	className: ''
-// };
-
-BasePage.propTypes = {
-	className: PropTypes.any.isRequired
+BasePage.defaultProps = {
+	className: ''
 };
+
+// BasePage.propTypes = {
+// 	className: PropTypes.any.isRequired
+// };
 
 export default BasePage;

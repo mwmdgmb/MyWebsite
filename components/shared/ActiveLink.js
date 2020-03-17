@@ -1,6 +1,6 @@
 import React, { Children } from 'react';
 import PropsType from 'prop-types';
-import Link from 'next/link';
+import {Link} from "../../routes";
 import { useRouter } from 'next/router';
 
 const ActiveLink = ({ children, activeClassName, ...props }) => {
