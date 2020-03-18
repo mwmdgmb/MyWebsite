@@ -13,7 +13,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
-import PortfolioCard from '../components/portfolio/PortfolioCard';
+import PortfolioCard from '../components/Portfolio/PortfolioCard';
 
 export class Portfolios extends Component {
 	static async getInitialProps() {
