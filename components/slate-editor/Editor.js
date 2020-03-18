@@ -3,7 +3,7 @@ import { Editor } from "slate-react";
 import HoverMenu from "./HoverMenu";
 import { renderMark, renderNode } from "./renderers";
 import { initialValue } from "./initial-values";
-import ControllMenu from "./controllMenu";
+import ControllMenu from "./ControllMenu";
 // import Html from 'slate-html-serializer'
 import Plain from "slate-plain-serializer";
 import { Value } from "slate";
