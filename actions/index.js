@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import { getCookieFromRequest } from "./../helpers/utils";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:3000/api/v1"
+  baseURL: "https://portfolios-ten.now.sh/api/v1"
 });
 
 const setAuthHeader = req => {

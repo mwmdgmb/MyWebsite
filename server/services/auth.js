@@ -1,6 +1,5 @@
 var jwt = require('express-jwt');
 const jwksRsa = require('jwks-rsa');
-const namespace = 'http://localhost:3000/';
 
 exports.checkJWK = jwt({
 	secret: jwksRsa.expressJwtSecret({
