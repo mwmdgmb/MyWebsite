@@ -1,9 +1,11 @@
+
 import axios from "axios";
 import Cookies from "js-cookie";
 import { getCookieFromRequest } from "./../helpers/utils";
 
 const axiosInstance = axios.create({
-  baseURL: "https://portfolios-ten.now.sh/api/v1"
+  baseURL: `${process.env.BASE_URL}/api/v1`,
+  timeout: 3000
 });
 
 const setAuthHeader = req => {

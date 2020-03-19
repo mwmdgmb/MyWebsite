@@ -46,7 +46,7 @@ class Auth0 {
 	logout() {
 		Cookies.remove('jwt');
 		this.auth0.logout({
-			returnTo: '',
+			returnTo: 'https://mohammad-garmabi.now.sh',
 			clientID: CLIENT_ID
 		});
 	}

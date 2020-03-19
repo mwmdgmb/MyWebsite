@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/css/style.css";
 import "react-toastify/dist/ReactToastify.css";
+// import Fonts from "../helpers/Fonts";
 
 
 export default class MyApp extends App {
@@ -25,6 +26,11 @@ export default class MyApp extends App {
     let auth = { user, isAuthenticated: !!user, isSiteOwner };
 
     return { pageProps, auth };
+  }
+
+
+  componentDidMount() {
+    // Fonts()
   }
   render() {
     const { Component, pageProps, auth } = this.props;

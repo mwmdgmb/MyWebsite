@@ -47,13 +47,6 @@ export class PortfolioNew extends Component {
 		return (
 			<BaseLayout {...this.props.auth}>
 				<BasePage className="portfolio-create-page" title="Create New Portfolio">
-					{/* ReactStrap Grid */}
-					{/* <Row>
-						<Col sm="12" md="6" lg="6">
-							<PortfolioCreateForm />
-						</Col>
-					</Row> */}
-					{/* Mateerial Grid */}
 					<Grid container className="d-flex justify-center justify-content-center">
 						<Grid item xs={12} sm={10} md={8} lg={6}>
 							<PortfolioCreateForm initialValues={INITAIL_VALUES} error={error} onSubmit={this.savePortfolio} />

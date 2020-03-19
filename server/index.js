@@ -1,4 +1,5 @@
 const express = require("express");
+const compression = require('compression')
 const path = require("path")
 const next = require("next");
 const routes = require("../routes");
@@ -56,6 +57,7 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    server.use(compression())
     server.use(bodyParser.json());
 
     // server.get('/profile/:id', (req, res) => {
