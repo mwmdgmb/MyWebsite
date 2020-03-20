@@ -1,6 +1,7 @@
 @import "./mixins/animations";
 
 .about-page {
+  padding-top: 40px !important;
   .left-side {
     margin-top: 10vh;
 
@@ -45,5 +46,14 @@
     to {
       opacity: 1;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page .left-side {
+    border-bottom: 1px solid #80808071;
+  }
+  .biography {
+    padding-top: 10px;
   }
 }

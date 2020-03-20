@@ -5,10 +5,10 @@ import { Container, Row, Col } from "reactstrap";
 import moment from "moment";
 import { Link } from "../routes";
 // icon
-import TelegramIcon from '@material-ui/icons/Telegram';
+import TelegramIcon from "@material-ui/icons/Telegram";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import Particles from "react-particles-js";
+// import Particles from "react-particles-js";
 import { getBlogs } from "../actions";
 import { shortenText } from "../helpers/utils";
 
@@ -74,7 +74,7 @@ export class Blog extends Component {
             </div>
           </Container>
         </div>
-        <Particles
+        {/* <Particles
           // params={ParticlesObj}
           style={{
             position: "absolute",
@@ -82,12 +82,12 @@ export class Blog extends Component {
           }}
           width="100%"
           height="600px"
-        />
+        /> */}
         <BasePage className="blog-body">
           <Row>
             <Col md="10" lg="8" className="mx-auto">
               {this.renderBlogs(blogs)}
-              <div className="clearfix">
+              <div className="clearfix mr-2">
                 <a className="text-custom float-right" href="/blogEditor">
                   Older Posts <span>&rarr;</span>
                 </a>
@@ -100,10 +100,13 @@ export class Blog extends Component {
               <Row>
                 <div className="col-lg-8 col-md-10 mx-auto">
                   <ul className="list-inline text-center my-5">
-                  <li className="list-inline-item">
+                    <li className="list-inline-item">
                       <a target="_blank" href="https://t.me/Mohammad_Garmabi">
                         <span className="fa-stack fa-lg">
-                          <TelegramIcon fontSize="large" style={{ color: "#17a2b8" }} />
+                          <TelegramIcon
+                            fontSize="large"
+                            style={{ color: "#17a2b8" }}
+                          />
                         </span>
                       </a>
                     </li>
@@ -118,13 +121,16 @@ export class Blog extends Component {
                       </a>
                     </li>
                     <li className="list-inline-item disabled">
-                      <a target="_blank" href="https://www.instagram.com/mwmd__gmb" className="disabled">
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/mwmd__gmb"
+                        className="disabled"
+                      >
                         <span className="fa-stack fa-lg">
                           <InstagramIcon fontSize="large" color="primary" />
                         </span>
                       </a>
                     </li>
-                   
                   </ul>
                   <p className="copyright text-muted">
                     Copyright &copy; Mwmd Gmb 2020

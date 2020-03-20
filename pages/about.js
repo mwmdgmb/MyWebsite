@@ -6,9 +6,12 @@ import { Row, Col } from "reactstrap";
 export class About extends Component {
   render() {
     return (
-      <BaseLayout title="Mohammad Garmabi - Learn More About Me" {...this.props.auth}>
+      <BaseLayout
+        title="Mohammad Garmabi - Learn More About Me"
+        {...this.props.auth}
+      >
         <BasePage className="about-page">
-          <Row className="mt-5 d-flex flex-row flex-wrap align-items-lg-baseline">
+          <Row className="d-flex flex-row flex-wrap align-items-lg-baseline">
             <Col md="6">
               <div className="left-side">
                 <h1 className="title fadein">Hello, Welcome</h1>

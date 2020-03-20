@@ -4,20 +4,16 @@
 // @import './color';
 @import "./alert";
 @import "./slate_blog_editor";
-@import "./owlCarousel";
 @import "./NotPage";
-@import'./cv'; 
+@import "./cv";
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  // background: url('.a./images/wallpapersden.com_firewatch-digital-art_1600x900.jpg') 100% 100%  !important;
   outline: none !important;
   border: none !important;
   font-weight: 700 !important;
   font-size: 1rem !important;
-  font-family: sans-serif !important; 
+  font-family: sans-serif !important;
 }
 
 .clickable {

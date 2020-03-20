@@ -141,7 +141,7 @@ export default class Header extends Component {
 
   render() {
     const { isAuthenticated, user, className } = this.props;
-    const isOpen = this.state.isOpen ;
+    const isOpen = this.state.isOpen;
     const menuOpenClass = isOpen ? "menu-open" : "menu-close";
 
     return (
@@ -151,7 +151,7 @@ export default class Header extends Component {
           expand="md"
           className={`port-navbar port-nav-base ${className} ${menuOpenClass} shadow-lg`}
         >
-          <div className="container-fluid px-5">
+          <div className="container-fluid px-1">
             <NavbarBrand className="port-navbar-brand">
               <div className="d-flex flex-row">
                 {isAuthenticated ? (
@@ -206,7 +206,7 @@ export default class Header extends Component {
             </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar color="dark">
-              <Nav className="m-auto" navbar>
+              <Nav className="m-auto pl-4" navbar>
                 <NavItem className="port-navbar-item">
                   <BsNavLink route="/" title="Home" />
                 </NavItem>

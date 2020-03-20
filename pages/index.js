@@ -34,7 +34,7 @@ export class Home extends Component {
   animatedCard() {
     this.card = setInterval(() => {
       this.setState({ isFlipping: !this.state.isFlipping });
-    }, 10000);
+    }, 5000);
   }
   render() {
     const { isAuthenticated, user } = this.props.auth;
@@ -55,7 +55,7 @@ export class Home extends Component {
               <Col md="6">
                 <div className="hero-section">
                   <div className={`flipper ${isFlipping ? "isFlipping" : ""}`}>
-                    <div className="front">
+                    <div className="front d-flex justify-content-center align-items-center">
                       <div className="hero-section-content">
                         <h2> Front End Web Developer </h2>
                         <div className="hero-section-content-intro">
@@ -64,14 +64,14 @@ export class Home extends Component {
                       </div>
                       <img
                         alt="Guy programming welcome picture"
-                        className="image"
+                        className="image img-fluid"
                         src={seletionOwn}
                       />
                       <div className="shadow-custom">
                         <div className="shadow-inner"> </div>
                       </div>
                     </div>
-                    <div className="back">
+                    <div className="back d-flex justify-content-center align-items-center">
                       <div className="hero-section-content">
                         <h2> Get Your Projects Done </h2>
                         <div className="hero-section-content-intro">
@@ -81,7 +81,7 @@ export class Home extends Component {
                       </div>
                       <img
                         alt="Guy programming welcome picture"
-                        className="image"
+                        className="image img-fluid"
                         src={seletionTwo}
                       />
                       <div className="shadow-custom shadow-custom-2">
@@ -91,7 +91,7 @@ export class Home extends Component {
                   </div>
                 </div>
               </Col>
-              <Col md="6" className="hero-welcome-wrapper mt-5 text-center">
+              <Col md="6" className="hero-welcome-wrapper mt-1 text-center">
                 <div className="hero-welcome-text">
                   <h1>
                     {isAuthenticated && (
